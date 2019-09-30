@@ -17,3 +17,11 @@ Mostra todos os containers criados, em execução ou não.
 Acessa o bash do container criado. Acessando o bash do container debian criado.
 
     docker container run -it debian bash
+
+Atribuindo nome ao container
+
+    docker container --name 'nome do container' -it debian bash
+
+Reutilizar container
+
+    docker container start -ai mydeb
