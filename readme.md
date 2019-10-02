@@ -6,6 +6,10 @@ Executar o container. Se a imagem não for encontrada no cache, ela é baixada, 
 
     docker container run 'container'
 
+Executa o container, mapeando para a porta escolhida
+
+    docker container run -p 8080:80 'container'
+
 Mostra os containers em execução
 
     docker container ps
