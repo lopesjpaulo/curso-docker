@@ -29,3 +29,30 @@ Atribuindo nome ao container
 Reutilizar container
 
     docker container start -ai mydeb
+
+Mapear diretórios para container
+
+    docker container run -p 8080:80 -v $(pwd)/pasta:/usr/share/nginx/pasta 'container''
+
+    pwd = diretório atual
+
+Executando container em background no modo daemon
+
+**NGINX**
+
+    docker container run -d --name 'nome do container' -p 8080:80 -v $(pwd)/pasta:/usr/share/nginx/pasta nginx
+
+**Apache**
+    
+    docker container run -d --name 'nome do container' -p 8080:80 -v $(pwd)/pasta:/usr/local/apache2/htdocs httpd
+
+Visualizar logs do container
+
+    docker container logs 'container'
+
+Inspecionar informações sobre o container
+
+    docker container inspect 'container'
+
+    
+
